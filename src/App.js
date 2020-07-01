@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import { Counter } from './features/counter/Counter';
-import { MainContainer } from './features/mainContainer/MainContainer';
+//import { MainContainer } from './features/mainContainer/MainContainer';
 import './App.css';
+import Header from './features/mainContainer/Header';
+import Footer from './features/mainContainer/Footer';
+import Menu from './features/mainContainer/Menu';
 
-function App() {
-  return (
-    <div>
-      <MainContainer />
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<Header />
+				<Menu />
+				<div style={{"marginLeft":"280px", "marginRight":"30px", "marginTop":"20px"}}>
+			  		{this.props.children}
+			  	</div>
+			  	<Footer />
+		    </div>
+		);
+	}
 }
+
+// function App() {
+//   return (
+//     <div>
+// 		<Header />
+// 		<Menu />
+// 	  	{this.props.children}
+// 	  	<Footer />
+//     </div>
+//   );
+// }
 
 // function App() {
 //   return (
