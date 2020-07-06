@@ -8,6 +8,12 @@ import * as serviceWorker from './serviceWorker';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import MainContainer from './features/mainContainer/MainContainer';
 import ProductDetails from './features/product/components/ProductDetails';
+import Signup from './features/signup/Signup';
+import Login from './features/login/Login';
+import About from './features/misc/About';
+import AddProduct from './features/product/components/AddProduct';
+import UserCart from './features/product/components/UserCart';
+import Orders from './features/product/components/Orders';
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -16,9 +22,14 @@ ReactDOM.render(
 	      <Route path = "/" component = {App}>
 	      	<IndexRoute component = {MainContainer} />
 			<Route path = "/home" component = {MainContainer} />
-			<Route path = "/about" component = {MainContainer} />
+			<Route path = "/about" component = {About} />
 			<Route path = "/contact" component = {MainContainer} />
 			<Route path = "/products/:productId" component = {ProductDetails} />
+			<Route path = "/signup" component = {Signup} />
+			<Route path = "/login" component = {Login} />
+			<Route path = "/addproduct" component = {AddProduct} />
+			<Route path = "/usercart" component = {UserCart} />
+			<Route path = "/orders" component = {Orders} />
 	      </Route>
 	   </Router>
     </Provider>,
